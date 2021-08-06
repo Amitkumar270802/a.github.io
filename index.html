@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        height: 98vh;
+        width: 98%;
+        font-family: sans-serif;
+        background: black;
+    }
+
+
+    .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px dotted black;
+        width: 40%;
+        height: 60%;
+        left: 30%;
+        background: url(health.jpg);
+        background-position: center;
+        background-position-x: 120px;
+        background-position-y: 50px;
+    }
+
+
+    h2 {
+        display: block;
+        border-bottom: 6px double black;
+        position: absolute;
+        left: 35%;
+        top: 5px;
+    }
+
+
+
+    .box1 {
+        position: absolute;
+        top: 80px;
+        padding: 3px 0;
+    }
+
+    .btn1 {
+
+        background: wheat;
+        position: relative;
+        left: 25%;
+        width: 80px;
+        margin-bottom: 30px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .btn1:hover {
+        background: black;
+        color: white;
+    }
+
+    #c {
+        position: absolute;
+        left: 25%;
+        top: 82%;
+        text-align: center;
+    }
+
+    input {
+        border-radius: 5px;
+        padding: 5px;
+        margin: 10px;
+        background: wheat;
+    }
+
+    .box2 {
+        position: absolute;
+        top: 250px;
+        width: 50%;
+        left: 20px;
+
+    }
+
+    span {
+        text-align: center;
+        color: white;
+    }
+
+    p {
+        position: absolute;
+        border: 2px solid black;
+        width: 50%;
+        height: 20px;
+        left: 25px;
+        background: wheat;
+
+    }
+
+    input {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <H2>BMI Calculator</H2><br>
+        <div class="box1">
+            <input type="number" id="a" placeholder="Enter Mass in KG">
+            <input type="number" id="b" placeholder="Enter Heigh in cm"><br>
+            <input type="button" value="Calculate" onclick="fun()" class="btn1">
+            <input type="button" value="Reset" onclick="fun1()" class="btn1">
+            <p id="c" aria-placeholder="d"></p>
+        </div>
+        <div class="box2">
+            <span> <strong> BMI Classification ::</strong><br>
+                i) 18.5 or less Underweight <br>
+                ii) 18.5 to 24.99 Normal Weight <br>
+                iii) 25 to 29.99 Overweight <br>
+                iv) 30 to 34.99 Obesity (Class 1) <br>
+                v) 35 to 39.99 Obesity (Class 2) <br>
+                vi) 40 or greater Morbid Obesity</span>
+        </div>
+    </div>
+
+
+</body>
+<script type="text/javascript">
+    function fun() {
+        var d = parseFloat(document.getElementById('a').value)
+        var e = parseFloat(document.getElementById('b').value)
+        var f = document.getElementById('c').innerHTML = (d*10000)/( (e * e));
+    }
+    function fun1() {
+        var d = parseFloat(document.getElementById('a').value="")
+        var e = parseFloat(document.getElementById('b').value="")
+        var f = document.getElementById('c').innerHTML = "";
+    }
+
+</script>
+
+</html>
